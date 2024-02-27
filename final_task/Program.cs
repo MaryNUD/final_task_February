@@ -11,3 +11,19 @@ void PrintArray(string[] array)
     }
 }
 
+void Select(string[] arg)
+{
+    string[] newArray = new string[] {};
+    for(int i = 0; i < arg.Length; i++)
+    {
+        char[] eacharg = arg[i].ToCharArray();
+            if (eacharg.Length <= 3)
+                newArray = newArray.Append(arg[i]).ToArray();        
+    }
+    if (newArray.Length == 0)
+        Console.WriteLine("no such elements");
+    else
+        PrintArray(newArray);
+}
+
+Select(array);
